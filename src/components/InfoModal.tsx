@@ -31,7 +31,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onClose }) => {
           </div>
           <div>
             <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.3rem', fontWeight: 700, color: '#fff' }}>
-              About Pixel Shift
+              About Mukham Mattam
             </h3>
             <p style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: '#00f0ff' }}>
               Rearrange Reality • Interactive Particle Installation
@@ -45,7 +45,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onClose }) => {
               <Cpu style={{ width: 16, height: 16, color: '#00f0ff' }} /> Zero-Overhead GPU Pipeline
             </h4>
             <p style={{ fontSize: '0.78rem', color: '#94a3b8', lineHeight: 1.5 }}>
-              Pixel Shift deconstructs digital images into up to 140,000 independent particles. All trajectory math, curl noise fields, and easing functions execute in parallel on the GPU via custom WebGL vertex shaders at a steady 60–120 FPS.
+              Mukham Mattam deconstructs digital images into independent particles that serenely glide and reconstruct into Cappibara. All trajectory math and easing functions execute in parallel on the GPU via custom WebGL vertex shaders at a steady 60–144 FPS.
             </p>
           </div>
 
