@@ -98,9 +98,6 @@ For Hardware:
 [Mukham Mattam Repository](https://github.com/MEV1N/mukham-mattam)
 *Demonstrates instant drag-and-drop transformation of any image into the Cappibara portrait at 144 FPS with subtle cursor ripples and procedural audio.*
 
-# Additional Demos
-- Local development preview: `http://localhost:5173/`
-
 ## Team Contributions
 - Mevin Aby Manu: Full-stack architecture, WebGL particle simulation engine, GLSL vertex & fragment shaders, spatial pixel matching algorithms, UI/UX minimal design, audio synthesis engine, and project deployment.
 
