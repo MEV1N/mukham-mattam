@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Media & Recordings
+*.mp4
+*.mkv
+*.mov
+*.avi
