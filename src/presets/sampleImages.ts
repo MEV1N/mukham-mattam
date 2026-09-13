@@ -328,18 +328,19 @@ const mandalaDataUri = createPresetDataUri((ctx, s) => {
   ctx.fill();
 });
 
-export const CAPPIBARA_IMAGE: PresetImage = {
-  id: 'cappibara',
-  name: 'Cappibara',
+export const NANDHY_IMAGE: PresetImage = {
+  id: 'nandhy',
+  name: 'Nandhy',
   category: 'Target Form',
-  thumbnail: '/cappibara.jpeg',
-  dataUri: '/cappibara.jpeg'
+  thumbnail: '/nandhy.jpeg',
+  dataUri: '/nandhy.jpeg'
 };
 
-export const NANDHANA_IMAGE = CAPPIBARA_IMAGE;
+export const NANDHANA_IMAGE = NANDHY_IMAGE;
+export const CAPPIBARA_IMAGE = NANDHY_IMAGE;
 
 export const PRESET_IMAGES: PresetImage[] = [
-  CAPPIBARA_IMAGE,
+  NANDHY_IMAGE,
   {
     id: 'cyber-skull',
     name: 'Cyber Skull',

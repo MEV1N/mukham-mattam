@@ -49,7 +49,7 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
         </h1>
 
         <p className="minimal-subtitle">
-          Upload any image. Watch every pixel find its way to Cappibara.
+          Upload any image. Watch every pixel find its way to Nandhy.
         </p>
 
         {/* Minimal Black and White Dropzone */}

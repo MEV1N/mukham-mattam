@@ -13,20 +13,20 @@
 - Team Lead: Mevin Aby Manu
 
 ### Project Description
-Mukham Mattam (Face Change) is an interactive, GPU-accelerated web experience where any uploaded image disintegrates into thousands of luminous particles and serenely reorganizes itself into an adorable capybara (`cappibara.jpeg`). Powered by custom WebGL shaders, fluid particle dynamics, and ambient procedural audio.
+Mukham Mattam (Face Change) is an interactive, GPU-accelerated web experience where any uploaded image disintegrates into thousands of luminous particles and serenely reorganizes itself into an intimate portrait of Nandhy (`nandhy.jpeg`). Powered by custom WebGL shaders and fluid particle dynamics.
 
 ### The Problem (that doesn't exist)
-The internet is flooded with billions of digital images—portraits, selfies, corporate headshots, and memes—yet tragically few of them are capybaras. Humans are forced to manually search for capybaras online instead of having their existing photos automatically transform into the world's most peaceful creature.
+The internet is flooded with billions of digital images—portraits, selfies, corporate headshots, and memes—yet tragically few of them are Nandhy. Humans are forced to manually search for photos online instead of having their existing photos automatically transform into Nandhy.
 
 ### The Solution (that nobody asked for)
-Mukham Mattam deconstructs any uploaded image into 90,000 microscopic pointillist pixels using parallel GPU vertex shaders, guides them through gentle laminar physics and Ken Perlin's C2 smootherstep easing, and seamlessly constructs an intimate, relaxing portrait of a capybara. Zero buttons, zero downloads, zero configuration—just inevitable, serene capybara.
+Mukham Mattam deconstructs any uploaded image into 90,000 microscopic pointillist pixels using parallel GPU vertex shaders, guides them through gentle laminar physics and Ken Perlin's C2 smootherstep easing, and seamlessly constructs an intimate, relaxing portrait of Nandhy. Zero buttons, zero downloads, zero configuration—just inevitable, serene Nandhy.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
 - Languages used: TypeScript, GLSL (OpenGL Shading Language), HTML5, CSS3
 - Frameworks used: React 19, Vite
-- Libraries used: Lucide React, Web Audio API
+- Libraries used: Lucide React
 - Tools used: Visual Studio Code, Git, GitHub
 
 For Hardware:
@@ -56,8 +56,8 @@ For Software:
 ![Particle Metamorphosis](screenshots/midflight_particles.png)
 *Thousands of particles dissolving and flowing smoothly mid-flight using laminar GPU physics*
 
-![Crystallized Cappibara](screenshots/cappibara_crystallized.png)
-*90,000 particles at 144 FPS gracefully crystalized into the intimate Cappibara portrait*
+![Crystallized Nandhy](screenshots/nandhy_crystallized.png)
+*90,000 particles at 144 FPS gracefully crystalized into the intimate Nandhy portrait*
 
 # Diagrams
 ```
@@ -69,7 +69,7 @@ For Software:
                    │
                    ▼
    [Harmonic Spatial & Luminance Matcher]
-    (Binned Morton Sorting to Cappibara)
+     (Binned Morton Sorting to Nandhy)
                    │
                    ▼
     [GPU WebGL 1.0/2.0 Vertex Buffer]
@@ -80,8 +80,8 @@ For Software:
  (Whisper-Soft Laminar Flow, No Quirky Jitter)
                    │
                    ▼
-     [Final Crystallized Cappibara]
-  (Interactive Soft Touch/Cursor Waves)
+      [Final Crystallized Nandhy]
+   (Interactive Soft Touch/Cursor Waves)
 ```
 *Architecture and Data Flow Pipeline of Mukham Mattam's GPU particle engine*
 
@@ -95,11 +95,16 @@ For Hardware:
 
 ### Project Demo
 # Video
-[Mukham Mattam Repository](https://github.com/MEV1N/mukham-mattam)
-*Demonstrates instant drag-and-drop transformation of any image into the Cappibara portrait at 144 FPS with subtle cursor ripples and procedural audio.*
+![Mukham Mattam Transformation Demo](record.webp)
+
+[Watch Demo Video (record.mp4)](record.mp4)
+
+> **Direct Link:** [View record.mp4 on GitHub](https://github.com/MEV1N/mukham-mattam/blob/main/record.mp4)
+
+*Demonstrates the instant drag-and-drop transformation of images into the Nandhy portrait with smooth laminar particle dynamics and C2-continuous smootherstep easing.*
 
 ## Team Contributions
-- Mevin Aby Manu: Full-stack architecture, WebGL particle simulation engine, GLSL vertex & fragment shaders, spatial pixel matching algorithms, UI/UX minimal design, audio synthesis engine, and project deployment.
+- Mevin Aby Manu: Full-stack architecture, WebGL particle simulation engine, GLSL vertex & fragment shaders, spatial pixel matching algorithms, UI/UX minimal design, and project deployment.
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 

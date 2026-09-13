@@ -6,7 +6,9 @@ export default defineConfig({
   plugins: [react()],
   server: {
     watch: {
-      ignored: ['**/*.mp4', '**/*.mkv', '**/*.avi', '**/*.mov']
+      ignored: ['**/*.mp4', '**/*.mkv', '**/*.avi', '**/*.mov', '**/*.webp']
     }
   }
 })
+
+
