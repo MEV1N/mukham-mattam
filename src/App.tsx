@@ -5,7 +5,7 @@ import { CanvasViewport } from './components/CanvasViewport';
 import { detectDeviceCapabilities, getParticleCountForTier } from './engine/deviceDetector';
 import { loadImage, sampleImagePixels } from './engine/pixelSampler';
 import { matchPixels } from './engine/pixelMatcher';
-import { CAPPIBARA_IMAGE, PRESET_IMAGES } from './presets/sampleImages';
+import { NANDHY_IMAGE, PRESET_IMAGES } from './presets/sampleImages';
 import type { MatchedParticles } from './engine/pixelMatcher';
 import type { SampledImageData, ShiftSettings } from './types';
 
@@ -14,8 +14,8 @@ export function App() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [matchedData, setMatchedData] = useState<MatchedParticles | null>(null);
 
-  // Preloaded Cappibara sampled data
-  const cappibaraDataRef = useRef<SampledImageData | null>(null);
+  // Preloaded Nandhy sampled data
+  const nandhyDataRef = useRef<SampledImageData | null>(null);
 
   const [settings] = useState<ShiftSettings>({
     duration: 6.8,
@@ -25,25 +25,25 @@ export function App() {
     easing: 'cinematic',
     mapping: 'harmonic',
     colorMode: 'morph',
-    audioEnabled: true
+    audioEnabled: false
   });
 
-  // Preload Cappibara on app launch
+  // Preload Nandhy on app launch
   useEffect(() => {
     const profile = detectDeviceCapabilities();
     const count = getParticleCountForTier(profile.tier);
 
-    loadImage(CAPPIBARA_IMAGE.dataUri)
+    loadImage(NANDHY_IMAGE.dataUri)
       .then((img) => {
-        cappibaraDataRef.current = sampleImagePixels(img, count);
+        nandhyDataRef.current = sampleImagePixels(img, count);
       })
       .catch((err) => {
-        console.error('Failed to preload Cappibara:', err);
+        console.error('Failed to preload Nandhy:', err);
       });
   }, []);
 
   // Instant seamless transformation pipeline
-  const processImageToCappibara = useCallback(
+  const processImageToNandhy = useCallback(
     async (fileOrUrl: File | string) => {
       setIsProcessing(true);
 
@@ -64,25 +64,25 @@ export function App() {
         const profile = detectDeviceCapabilities();
         const count = getParticleCountForTier(profile.tier);
 
-        // Ensure target Cappibara data is ready
-        let targetData = cappibaraDataRef.current;
+        // Ensure target Nandhy data is ready
+        let targetData = nandhyDataRef.current;
         if (!targetData) {
-          const capImg = await loadImage(CAPPIBARA_IMAGE.dataUri);
+          const capImg = await loadImage(NANDHY_IMAGE.dataUri);
           targetData = sampleImagePixels(capImg, count);
-          cappibaraDataRef.current = targetData;
+          nandhyDataRef.current = targetData;
         }
 
         // Sample source image
         const sourceData = sampleImagePixels(sourceImg, count);
 
-        // Match pixels directly to Cappibara
+        // Match pixels directly to Nandhy
         const matched = matchPixels(sourceData, targetData, 'harmonic');
 
         setMatchedData(matched);
         setIsProcessing(false);
         setScreen('transforming'); // Instantly starts canvas animation!
       } catch (err) {
-        console.error('Error shifting to Cappibara:', err);
+        console.error('Error shifting to Nandhy:', err);
         setIsProcessing(false);
       }
     },
@@ -91,9 +91,9 @@ export function App() {
 
   // Quick test with sample source image
   const handleSelectSample = () => {
-    // Pick the cyber skull or mandala as sample source to turn into Cappibara
-    const sampleSrc = PRESET_IMAGES[1] ? PRESET_IMAGES[1].dataUri : CAPPIBARA_IMAGE.dataUri;
-    processImageToCappibara(sampleSrc);
+    // Pick the cyber skull or mandala as sample source to turn into Nandhy
+    const sampleSrc = PRESET_IMAGES[1] ? PRESET_IMAGES[1].dataUri : NANDHY_IMAGE.dataUri;
+    processImageToNandhy(sampleSrc);
   };
 
   const handleReset = () => {
@@ -113,7 +113,7 @@ export function App() {
       <main style={{ width: '100%', height: '100%', position: 'relative' }}>
         {screen === 'landing' && (
           <LandingHero
-            onSelectImage={processImageToCappibara}
+            onSelectImage={processImageToNandhy}
             onSelectSample={handleSelectSample}
           />
         )}
@@ -122,14 +122,14 @@ export function App() {
           <CanvasViewport
             matchedData={matchedData}
             settings={settings}
-            onDropNewImage={processImageToCappibara}
+            onDropNewImage={processImageToNandhy}
           />
         )}
 
         {/* Seamless Loading Sweep (Brief micro-moment) */}
         {isProcessing && (
           <div className="seamless-loader">
-            <span>DECONSTRUCTING PARTICLES → TARGET: CAPPIBARA</span>
+            <span>DECONSTRUCTING PARTICLES → TARGET: NANDHY</span>
             <div className="loader-bar">
               <div className="loader-bar-fill" />
             </div>

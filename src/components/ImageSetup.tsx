@@ -103,7 +103,7 @@ export const ImageSetup: React.FC<ImageSetupProps> = ({
           <div className="preview-box-header">
             <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', color: '#8b5cf6', letterSpacing: '0.06em', display: 'flex', alignItems: 'center', gap: 6 }}>
               <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#8b5cf6', display: 'inline-block' }} />
-              Target: Cappibara
+              Target: Nandhy
             </span>
             <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: '#10b981', display: 'flex', alignItems: 'center', gap: 4 }}>
               <Check style={{ width: 14, height: 14 }} /> Ready
@@ -111,10 +111,10 @@ export const ImageSetup: React.FC<ImageSetupProps> = ({
           </div>
 
           <div className="preview-image-frame">
-            <img src={targetImageUri || '/cappibara.jpeg'} alt="Target Cappibara" />
+            <img src={targetImageUri || '/nandhy.jpeg'} alt="Target Nandhy" />
           </div>
 
-          <p className="preview-label">{targetName || 'Cappibara'}</p>
+          <p className="preview-label">{targetName || 'Nandhy'}</p>
         </div>
       </div>
 
@@ -186,7 +186,7 @@ export const ImageSetup: React.FC<ImageSetupProps> = ({
         </button>
 
         <p style={{ fontSize: '0.75rem', color: '#64748b', fontFamily: 'var(--font-mono)' }}>
-          Interactive physics & audio activate upon transform
+          Interactive physics activate upon transform
         </p>
       </div>
 

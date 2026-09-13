@@ -45,7 +45,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onClose }) => {
               <Cpu style={{ width: 16, height: 16, color: '#00f0ff' }} /> Zero-Overhead GPU Pipeline
             </h4>
             <p style={{ fontSize: '0.78rem', color: '#94a3b8', lineHeight: 1.5 }}>
-              Mukham Mattam deconstructs digital images into independent particles that serenely glide and reconstruct into Cappibara. All trajectory math and easing functions execute in parallel on the GPU via custom WebGL vertex shaders at a steady 60–144 FPS.
+              Mukham Mattam deconstructs digital images into independent particles that serenely glide and reconstruct into Nandhy. All trajectory math and easing functions execute in parallel on the GPU via custom WebGL vertex shaders at a steady 60–144 FPS.
             </p>
           </div>
 

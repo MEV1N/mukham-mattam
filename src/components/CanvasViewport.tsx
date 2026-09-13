@@ -2,7 +2,6 @@ import React, { useRef, useEffect, useState, useCallback } from 'react';
 import type { MatchedParticles } from '../engine/pixelMatcher';
 import { WebGLParticleRenderer } from '../engine/webglRenderer';
 import { Canvas2DRenderer } from '../engine/canvas2dFallback';
-import { audioEngine } from '../engine/audioEngine';
 import type { ShiftSettings } from '../types';
 
 interface CanvasViewportProps {
@@ -29,9 +28,7 @@ export const CanvasViewport: React.FC<CanvasViewportProps> = ({
   const animStateRef = useRef({
     progress: 0.0,
     isPlaying: true,
-    startTime: 0,
-    hasTriggeredConvergenceAudio: false,
-    hasTriggeredDisintegrateAudio: false
+    startTime: 0
   });
 
   // Initialize renderer
@@ -63,13 +60,8 @@ export const CanvasViewport: React.FC<CanvasViewportProps> = ({
     animStateRef.current = {
       progress: 0.0,
       isPlaying: true,
-      startTime: performance.now(),
-      hasTriggeredConvergenceAudio: false,
-      hasTriggeredDisintegrateAudio: false
+      startTime: performance.now()
     };
-
-    audioEngine.playDisintegrate();
-    animStateRef.current.hasTriggeredDisintegrateAudio = true;
 
     return () => {
       if (rendererRef.current) {
@@ -105,22 +97,10 @@ export const CanvasViewport: React.FC<CanvasViewportProps> = ({
 
         if (newProgress >= 1.0) {
           newProgress = 1.0;
-          state.isPlaying = false; // Settled seamlessly into Cappibara
+          state.isPlaying = false; // Settled seamlessly into Nandhy
         }
 
         state.progress = newProgress;
-
-        if (newProgress > 0.08 && !state.hasTriggeredDisintegrateAudio) {
-          audioEngine.playDisintegrate();
-          state.hasTriggeredDisintegrateAudio = true;
-        }
-
-        audioEngine.updateFlowProgress(newProgress);
-
-        if (newProgress >= 0.90 && !state.hasTriggeredConvergenceAudio) {
-          audioEngine.playConvergence();
-          state.hasTriggeredConvergenceAudio = true;
-        }
       }
 
       // Update minimal phase description
@@ -132,7 +112,7 @@ export const CanvasViewport: React.FC<CanvasViewportProps> = ({
       } else if (p < 0.98) {
         setPhaseText('REORGANIZING');
       } else {
-        setPhaseText('CAPPIBARA');
+        setPhaseText('NANDHY');
       }
 
       if (rendererRef.current) {
@@ -279,7 +259,7 @@ export const CanvasViewport: React.FC<CanvasViewportProps> = ({
             zIndex: 60
           }}
         >
-          DROP TO TRANSFORM INTO CAPPIBARA
+          DROP TO TRANSFORM INTO NANDHY
         </div>
       )}
 
